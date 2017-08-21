@@ -9,7 +9,8 @@ RUN apk add --update \
     nodejs-npm \
     python \
     make \
-    g++
+    g++ \
+    git
 
 # install dredd
 RUN npm install -g dredd@4.3.0
@@ -19,6 +20,7 @@ RUN apk del \
     python \
     make \
     g++ \
+    git \
   && rm -rf /var/cache/apk/*
 
 WORKDIR /docs
